@@ -4,6 +4,6 @@ You can download the latest version of Setup.msi from this repository.
 
 ## Download Instructions
 
-1. Go to the [Releases]([https://github.com/your-username/your-repository/releases](https://github.com/HenryKim2022/PortKiller/releases/tag/PortKiller) page.
+1. Go to the [Releases]([https://github.com/HenryKim2022/PortKiller/releases](https://github.com/HenryKim2022/PortKiller/releases/tag/PortKiller) page.
 2. Select the version of Setup.msi that you want to download.
 3. Click on the file name to download the executable.
