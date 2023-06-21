@@ -1,6 +1,6 @@
 # Download PortKiller
 
-You can download the latest version of File.exe from this repository.
+You can download the latest version of Setup.msi from this repository.
 
 ## Download Instructions
 
