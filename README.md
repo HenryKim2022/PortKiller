@@ -15,4 +15,5 @@ You can download the latest version of Setup.msi from this repository.
 2. Type the port that u want to stop on search field (for example, :80)
 3. Select(check) desired port to stop, and Click "Kill" button
 
-### If u're already killing the selected port but the port still alive/ used, run as administrator the PortKiller.
+## Note:
+### If u're already killing the selected port but the port still alive/ used, run as administrator the PortKiller and redo the usage instruction from step 1. 
