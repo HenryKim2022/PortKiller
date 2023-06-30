@@ -167,9 +167,12 @@ End Function
             Dim address As String = addressMatches(i).Value
 
             Dim item As String = address & ":" & port
-            CheckedListBox1.Items.Add(item)
 
-            portsItems.Add(item)
+            If (Not (CheckedListBox1.Items.Contains(item))) Then
+                CheckedListBox1.Items.Add(item)
+                portsItems.Add(item)
+            End If
+
         Next
 
         process.WaitForExit()
@@ -343,5 +346,15 @@ End Function
 
     Private Sub TableLayoutPanel4_Click(sender As Object, e As EventArgs) Handles TableLayoutPanel4.Click
         Button5.Focus()
+    End Sub
+
+    Private Sub Panel3_Click(sender As Object, e As EventArgs) Handles Panel3.Click
+        Dim urlFB As String = "https://www.facebook.com/profile.php?id=100025068874578"
+        Process.Start(urlFB)
+    End Sub
+
+    Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles Panel2.Click
+        Dim urlIG As String = "https://www.instagram.com/henrykim119"
+        Process.Start(urlIG)
     End Sub
 End Class
