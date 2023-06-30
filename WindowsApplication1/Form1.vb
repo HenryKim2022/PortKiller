@@ -92,17 +92,17 @@ Public Class Form1
     End Sub
 
 
- Private Function IsTextBoxEmptyInAllLines() As Boolean
-    Dim lines() As String = TextBox1.Lines
+    Private Function IsTextBoxEmptyInAllLines() As Boolean
+        Dim lines() As String = TextBox1.Lines
 
-    For Each line As String In lines
-        If Not String.IsNullOrWhiteSpace(line) Then
-            Return False
-        End If
-    Next
+        For Each line As String In lines
+            If Not String.IsNullOrWhiteSpace(line) Then
+                Return False
+            End If
+        Next
 
-    Return True
-End Function
+        Return True
+    End Function
 
 
     Private Function GetWindowsVersion(output As String) As String
@@ -138,7 +138,7 @@ End Function
         ' Clear existing items in CheckedListBox
         CheckedListBox1.Items.Clear()
 
-        ' Execute netstat command to retrieve used ports
+        ' Execute netstat command to retrieve used ports for TCP
         Dim processInfo As New ProcessStartInfo()
         processInfo.FileName = "netstat"
         processInfo.Arguments = "-ano" ' Include process ID information
@@ -148,38 +148,70 @@ End Function
 
         Dim process As Process = Process.Start(processInfo)
 
-        ' Read netstat output and add used ports with local address to CheckedListBox
+        ' Read netstat output and add used TCP ports with local address to CheckedListBox
         Dim output As String = process.StandardOutput.ReadToEnd()
 
         Dim portRegex As New Regex("(?<=:)\d+(?=\s)")
         Dim addressRegex As New Regex("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
+        Dim stateProtocolRegex As New Regex("\s+(LISTENING|ESTABLISHED|TIME_WAIT|CLOSE_WAIT)\s+(\w+)\s")
 
         Dim portMatches As MatchCollection = portRegex.Matches(output)
         Dim addressMatches As MatchCollection = addressRegex.Matches(output)
+        Dim stateProtocolMatches As MatchCollection = stateProtocolRegex.Matches(output)
 
-        Dim minCount As Integer = Math.Min(portMatches.Count, addressMatches.Count)
+        Dim minCount As Integer = Math.Min(Math.Min(portMatches.Count, addressMatches.Count), stateProtocolMatches.Count)
 
         ' Initialize the portsItems variable with original items
-        portsItems = New List(Of String)()
+        Dim portsItems As New List(Of String)()
 
         For i As Integer = 0 To minCount - 1
             Dim port As String = portMatches(i).Value
             Dim address As String = addressMatches(i).Value
+            Dim state As String = stateProtocolMatches(i).Groups(1).Value
+            Dim protocol As String = If(stateProtocolMatches(i).Groups(2).Value.ToUpper() = "UDP", "UDP", "TCP")
 
-            Dim item As String = address & ":" & port
+            Dim item As String = $"{address}:{port}  :--> [status:{state} | protocol:{protocol}]"
 
             If (Not (CheckedListBox1.Items.Contains(item))) Then
                 CheckedListBox1.Items.Add(item)
                 portsItems.Add(item)
             End If
+        Next
 
+        ' Execute netstat command to retrieve used ports for UDP
+        processInfo.Arguments = "-ano -p UDP" ' Include process ID information for UDP
+        process = Process.Start(processInfo)
+        output = process.StandardOutput.ReadToEnd()
+
+        portMatches = portRegex.Matches(output)
+        addressMatches = addressRegex.Matches(output)
+        stateProtocolMatches = stateProtocolRegex.Matches(output)
+
+        minCount = Math.Min(Math.Min(portMatches.Count, addressMatches.Count), stateProtocolMatches.Count)
+
+        For i As Integer = 0 To minCount - 1
+            Dim port As String = portMatches(i).Value
+            Dim address As String = addressMatches(i).Value
+            Dim state As String = stateProtocolMatches(i).Groups(1).Value
+            Dim protocol As String = "UDP"
+
+            Dim item As String = $"{address}:{port}  :--> [status:{state} | proto:{protocol}]"
+
+            If (Not (CheckedListBox1.Items.Contains(item))) Then
+                CheckedListBox1.Items.Add(item)
+                portsItems.Add(item)
+            End If
         Next
 
         process.WaitForExit()
         process.Close()
 
-        CheckedListBox1.Tag = portsItems
+        CheckedListBox1.Tag = portsItems ' Store the original items in the Tag property
     End Sub
+
+
+
+
 
     Private Sub init_sbox()
         TextBox3.ForeColor = Color.Gray
@@ -265,7 +297,7 @@ End Function
 
                 ' Display status in TextBox2
                 If result Then
-                    TextBox2.AppendText("Port " & port & " killed successfully." & Environment.NewLine)
+                    TextBox2.AppendText("Port " & port & "killed successfully." & Environment.NewLine)
                 Else
                     TextBox2.AppendText("Failed to kill port " & port & "." & Environment.NewLine)
                 End If
