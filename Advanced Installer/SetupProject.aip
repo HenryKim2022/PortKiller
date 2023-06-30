@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="20.7" version="20.7" Modules="simple" RootPath="." Language="en" Id="{C510CAF6-A189-40D7-865E-641A1688E1B6}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.7" version="20.7" Modules="simple" RootPath="." Language="en" Id="{ED2C8114-105E-4BAC-AE47-EBE5CDF83295}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
     <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
   </COMPONENT>
@@ -10,13 +10,13 @@
     <ROW Property="ARPPRODUCTICON" Value="favicon.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="1152125001"/>
-    <ROW Property="ProductCode" Value="1033:{3F81F3FE-4117-40E8-A571-0ACDDD56D627} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{EB915DD4-9756-45A1-B16F-C7C7229874BD} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="PortKiller by Henry .K (aka Hendri)"/>
-    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="ProductName" Value="PortKiller by HK"/>
+    <ROW Property="ProductVersion" Value="2.3.3" Options="32"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
-    <ROW Property="UpgradeCode" Value="{32975B12-0DCD-40CA-91F1-D8FB7C7D1BAF}"/>
+    <ROW Property="UpgradeCode" Value="{60AC11CD-AA54-46CB-87C2-2E939C948134}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="AnyCPU_Debug:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="AnyCPU_Debug:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="AnyCPU_Debug:Windows NT 4.0" ValueLocId="-"/>
@@ -33,40 +33,40 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="APPDIR" ComponentId="{D79B49F9-2CB1-4645-BA3C-45661097E5AA}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="PortKillerbyHK.exe" ComponentId="{54ACD445-CCA1-41F6-B4C2-BC1639D5B9AE}" Directory_="APPDIR" Attributes="0" KeyPath="PortKillerbyHK.exe"/>
-    <ROW Component="PortKillerbyHK.exe.config" ComponentId="{1396765C-0588-42E7-A1FA-1EA4174D6C33}" Directory_="APPDIR" Attributes="0" KeyPath="PortKillerbyHK.exe.config" Type="0"/>
-    <ROW Component="ProductInformation" ComponentId="{96433288-5B2D-47CB-82EB-C8EE2921C322}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{8E1127BC-7410-4941-A8A4-C9F616C4EE73}" Directory_="SHORTCUTDIR" Attributes="0"/>
-    <ROW Component="System.Core.dll" ComponentId="{B659E4A0-2D9F-4040-9081-77A9BDA3D924}" Directory_="APPDIR" Attributes="0" KeyPath="System.Core.dll"/>
-    <ROW Component="System.Data.DataSetExtensions.dll" ComponentId="{4952EB10-994C-4122-A3AF-0B85CFB32851}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.DataSetExtensions.dll"/>
-    <ROW Component="System.Data.dll" ComponentId="{7C277BB3-8612-491C-8604-A88C4B1A05EA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.dll"/>
-    <ROW Component="System.Deployment.dll" ComponentId="{77832A1B-5BC4-4C50-8DCF-4539D48EA44C}" Directory_="APPDIR" Attributes="0" KeyPath="System.Deployment.dll"/>
-    <ROW Component="System.Drawing.dll" ComponentId="{15CB7947-7CE9-43A5-BA5B-344941ACEC26}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.dll"/>
-    <ROW Component="System.Net.Http.dll" ComponentId="{26E8EA56-CB2A-42FB-A478-22CCDAFD3567}" Directory_="APPDIR" Attributes="0" KeyPath="System.Net.Http.dll"/>
-    <ROW Component="System.Windows.Forms.dll" ComponentId="{234DD95B-AF8F-4AFB-BD8C-B44A1F6817B6}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.dll"/>
-    <ROW Component="System.Xml.Linq.dll" ComponentId="{1A96EF62-3550-4D7B-AA50-DAB246CD68B9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
-    <ROW Component="System.Xml.dll" ComponentId="{A88900F7-A658-418B-AF1B-7BF7DD8240F8}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
-    <ROW Component="System.dll" ComponentId="{9DEBF5A1-7DA3-4008-BE57-165BAFDCA651}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
+    <ROW Component="APPDIR" ComponentId="{6EBE2A84-32BB-464C-9141-D7BA423A4CE0}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="PortKillerbyHK.exe" ComponentId="{E2C0BECF-F373-422E-9F84-9048D6B464B6}" Directory_="APPDIR" Attributes="0" KeyPath="PortKillerbyHK.exe"/>
+    <ROW Component="PortKillerbyHK.exe.config" ComponentId="{DEE9C886-9869-4CC4-B23B-B0E8A118B701}" Directory_="APPDIR" Attributes="0" KeyPath="PortKillerbyHK.exe.config" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{154878FE-CB99-4B82-AB76-474E8012CFB3}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{A30F8C76-DBD7-4D7D-A97E-F2763DF59F95}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="System.Core.dll" ComponentId="{431841D3-81FD-469C-B782-81E543DF992B}" Directory_="APPDIR" Attributes="0" KeyPath="System.Core.dll"/>
+    <ROW Component="System.Data.DataSetExtensions.dll" ComponentId="{B121BC7D-EF2A-45FE-91B5-1F20F3207075}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.DataSetExtensions.dll"/>
+    <ROW Component="System.Data.dll" ComponentId="{A7BE9182-DF6E-483A-9CFA-4989A2B0C744}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.dll"/>
+    <ROW Component="System.Deployment.dll" ComponentId="{EC6BD516-5C65-48A9-A57D-0CB392009660}" Directory_="APPDIR" Attributes="0" KeyPath="System.Deployment.dll"/>
+    <ROW Component="System.Drawing.dll" ComponentId="{C23F40A1-B839-4E72-9145-3EE918536380}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.dll"/>
+    <ROW Component="System.Net.Http.dll" ComponentId="{A77E6036-66C8-46E1-A8CA-9C59948BD114}" Directory_="APPDIR" Attributes="0" KeyPath="System.Net.Http.dll"/>
+    <ROW Component="System.Windows.Forms.dll" ComponentId="{443959B4-ABB9-4A5D-8D32-8CFD9926E695}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.dll"/>
+    <ROW Component="System.Xml.Linq.dll" ComponentId="{17D8E183-CE09-4F2F-88AE-B1F70646DCC7}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
+    <ROW Component="System.Xml.dll" ComponentId="{745ADDF3-18A3-43A0-A1EF-BBD1F60064C4}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
+    <ROW Component="System.dll" ComponentId="{799BD21F-B55D-4629-8A44-F8A3DCC3C306}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
-    <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTEM~1.DLL|System.Windows.Forms.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" SelfReg="false"/>
-    <ROW File="PortKillerbyHK.exe" Component_="PortKillerbyHK.exe" FileName="PORTKI~1.EXE|PortKiller by HK.exe" Attributes="0" SourcePath="..\..\..\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\PortKiller by HK.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="PortKillerbyHK.exe" Component_="PortKillerbyHK.exe" FileName="PORTKI~1.EXE|PortKiller by HK.exe" Attributes="0" SourcePath="..\WindowsApplication1\bin\Debug\PortKiller by HK.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTEM~1.DLL|System.Drawing.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" SelfReg="false"/>
     <ROW File="System.Data.dll" Component_="System.Data.dll" FileName="SYSTEM~2.DLL|System.Data.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" SelfReg="false"/>
-    <ROW File="PortKillerbyHK.exe.config" Component_="PortKillerbyHK.exe.config" FileName="PORTKI~1.CON|PortKiller by HK.exe.config" Attributes="0" SourcePath="..\..\..\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\PortKiller by HK.exe.config" SelfReg="false"/>
+    <ROW File="PortKillerbyHK.exe.config" Component_="PortKillerbyHK.exe.config" FileName="PORTKI~1.CON|PortKiller by HK.exe.config" Attributes="0" SourcePath="..\WindowsApplication1\bin\Debug\PortKiller by HK.exe.config" SelfReg="false"/>
     <ROW File="System.Core.dll" Component_="System.Core.dll" FileName="SYSTEM~3.DLL|System.Core.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" SelfReg="false"/>
-    <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" SelfReg="false"/>
     <ROW File="System.Data.DataSetExtensions.dll" Component_="System.Data.DataSetExtensions.dll" FileName="SYSTEM~4.DLL|System.Data.DataSetExtensions.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll" SelfReg="false"/>
+    <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" SelfReg="false"/>
     <ROW File="System.Deployment.dll" Component_="System.Deployment.dll" FileName="SYSTEM~5.DLL|System.Deployment.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Deployment.dll" SelfReg="false"/>
-    <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTEM~6.DLL|System.Drawing.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" SelfReg="false"/>
-    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTEM~7.DLL|System.Net.Http.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTEM~6.DLL|System.Net.Http.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTEM~7.DLL|System.Windows.Forms.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" SelfReg="false"/>
     <ROW File="System.Xml.dll" Component_="System.Xml.dll" FileName="SYSTEM~8.DLL|System.Xml.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" SelfReg="false"/>
     <ROW File="System.Xml.Linq.dll" Component_="System.Xml.Linq.dll" FileName="SYSTEM~9.DLL|System.Xml.Linq.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" SelfReg="false"/>
-    <ROW File="PortKillerbyHK.pdb" Component_="PortKillerbyHK.exe" FileName="PORTKI~1.PDB|PortKiller by HK.pdb" Attributes="0" SourcePath="..\..\..\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\PortKiller by HK.pdb" SelfReg="false"/>
+    <ROW File="PortKillerbyHK.pdb" Component_="PortKillerbyHK.exe" FileName="PORTKI~1.PDB|PortKiller by HK.pdb" Attributes="0" SourcePath="..\WindowsApplication1\bin\Debug\PortKiller by HK.pdb" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -143,16 +143,16 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
-    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.dll"/>
     <ROW Feature_="MainFeature" Component_="PortKillerbyHK.exe"/>
+    <ROW Feature_="MainFeature" Component_="System.Drawing.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Data.dll"/>
     <ROW Feature_="MainFeature" Component_="PortKillerbyHK.exe.config"/>
     <ROW Feature_="MainFeature" Component_="System.Core.dll"/>
-    <ROW Feature_="MainFeature" Component_="System.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Data.DataSetExtensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Deployment.dll"/>
-    <ROW Feature_="MainFeature" Component_="System.Drawing.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Net.Http.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Xml.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Xml.Linq.dll"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
