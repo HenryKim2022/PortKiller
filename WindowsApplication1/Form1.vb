@@ -8,7 +8,7 @@ Public Class Form1
 
     Private keyPressCount As Integer = 0
     Private enterKeyPressCount As Integer = 0
-
+    Private portsItems As List(Of String)
 
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
         If e.KeyCode = Keys.Enter Then
@@ -132,11 +132,12 @@ Public Class Form1
     End Sub
 
 
-
-    Private portsItems As List(Of String)
     Private Sub init_cbox()
         ' Clear existing items in CheckedListBox
         CheckedListBox1.Items.Clear()
+
+        ' Initialize the portsItems list
+        portsItems = New List(Of String)()
 
         ' Execute netstat command to retrieve used ports for TCP
         Dim processInfo As New ProcessStartInfo()
@@ -161,8 +162,8 @@ Public Class Form1
 
         Dim minCount As Integer = Math.Min(Math.Min(portMatches.Count, addressMatches.Count), stateProtocolMatches.Count)
 
-        ' Initialize the portsItems variable with original items
-        Dim portsItems As New List(Of String)()
+        '' Initialize the portsItems variable with original items
+        'Dim portsItems As New List(Of String)()
 
         For i As Integer = 0 To minCount - 1
             Dim port As String = portMatches(i).Value
@@ -201,6 +202,8 @@ Public Class Form1
                 CheckedListBox1.Items.Add(item)
                 portsItems.Add(item)
             End If
+
+
         Next
 
         process.WaitForExit()
@@ -243,9 +246,11 @@ Public Class Form1
         ' Clear the CheckedListBox items
         CheckedListBox1.Items.Clear()
 
+
         ' Loop through each item in the original items
         For Each item As String In portsItems
             Dim itemText As String = item.ToLower()
+
 
             ' Check if item contains search text
             If itemText.Contains(searchText) Then
